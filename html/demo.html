@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teller</title>
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/teller.css" type="text/css" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-header-my">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="jq-sidebar-show-my" role="button"><span class="fa fa-bars"></span></a>
+            <a href="index.html" class="hidden-xs"><img class="navbar-brand" src="../images/logo.png"></a>
+            <a href="index.html" class="visible-xs"><img class="navbar-brand" src="../images/logo.jpg"></a>
+        </div>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="#" id="jq-search-btn-my"><span class="fa fa-search"></span></a></li>
+                <li><a href="editor.html" type="button"><span class="fa fa-edit"></span><span class="hidden-xs">&nbsp;Write Article</span></a></li>
+                <!-- Notifications -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-bell"></span>
+                      <span class="hidden-xs">&nbsp;Notifications</span>
+                      <span class="badge my-header-badge">10</span>
+                    </a>
+                    <ul class="dropdown-menu my-dropdown-scrollable">
+                        <li class="header t-padding-left-10">Notifications</li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li class="text-center"><a href="notifications.html">View all</a></li>
+                    </ul>
+                </li>
+                <!-- User Account -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/profilepic.png" class="my-header-user-img" alt="User Image">
+                        <span class="hidden-xs t-padding-left-10">Name<span class="caret"></span></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="my-journal.html"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-10">My Journal</span></a></li>
+                        <li><a href="d-article-manager.html"><span class="fa fa-support"></span><span class="t-padding-left-10">Article Manager<span></span></a></li>
+                        <li><a href="settings.html"><span class="fa fa-gear"></span><span class="t-padding-left-10">Settings</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="index.html"><span class="fa fa-sign-out"></span><span class="t-padding-left-10">Log out</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Seacrh Bar -->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-search-form-my" style="display: none;">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" id="jq-search-back-btn-my" style="width: 50px;"><span class="fa fa-arrow-left"></span></a>
+            <div class="pull-right my-search-bar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Seacrh Bar End -->
+    <!--Sideabr-->
+    <div class="my-sidebar" id="jq-sidebar-my" style="left: -250px;">
+        <ul class="list-group">
+            <li class="my-sidebar-header t-shadow1">
+                <a class="navbar-brand" id="jq-sidebar-hide-my" role="button"><span class="fa fa-close"></span></a>
+                <a href="index.html"><img src="../images/logo.png" height="20px" style="padding-left: 15px;"></a>
+            </li>
+            <li><a href="index.html" class="list-group-item my-border-radius-0"><span class="fa fa-home"></span><span class="t-padding-left-20">Home</span></a></li>
+            <li><a href="my-journal.html" class="list-group-item my-border-radius-0 active"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-20">My Journal</span></a></li>
+            <li><a href="d-article-manager.html" class="list-group-item my-border-radius-0"><span class="fa fa-tasks"></span> <span class="t-padding-left-20">Article Manager</span></a></li><hr/>
+
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"><strong>Subscription</strong></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 1</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 2</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 3</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 4</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 5</span></a></li>
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"></span><span class="fa fa-chevron-down"></span><span class="t-padding-left-20">View All</span></a></li><hr/>
+
+            <li><a href="settings.html" class="list-group-item my-border-radius-0"><span class="fa fa-gear"></span><span class="t-padding-left-20">Settings</span></a></li>
+        </ul>
+    </div>
+    <div class="my-overlay" id="jq-overlay-my" style="display:none;"></div>
+    <!--Sidebar End-->
+
+    <!-- Body -->
+    <div class="my-body">
+        <div class="my-body-component">
+            
+        </div>
+    </div>
+    <!-- Body End -->
+</body>
+</html>

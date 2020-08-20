@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Teller</title>
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/teller.css" type="text/css" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/chartjs.min.js"></script>
+    <script src="../js/my-chart.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-header-my">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="jq-sidebar-show-my" role="button"><span class="fa fa-bars"></span></a>
+            <a href="index.html" class="hidden-xs"><img class="navbar-brand" src="../images/logo.png"></a>
+            <a href="index.html" class="visible-xs"><img class="navbar-brand" src="../images/logo.jpg"></a>
+        </div>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="#" id="jq-search-btn-my"><span class="fa fa-search"></span></a></li>
+                <li><a href="editor.html" type="button"><span class="fa fa-edit"></span><span class="hidden-xs">&nbsp;Write Article</span></a></li>
+                <!-- Notifications -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-bell"></span>
+                      <span class="hidden-xs">&nbsp;Notifications</span>
+                      <span class="badge my-header-badge">10</span>
+                    </a>
+                    <ul class="dropdown-menu my-dropdown-scrollable">
+                        <li class="header t-padding-left-10">Notifications</li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li class="text-center"><a href="notifications.html">View all</a></li>
+                    </ul>
+                </li>
+                <!-- User Account -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/profilepic.png" class="my-header-user-img" alt="User Image">
+                        <span class="hidden-xs t-padding-left-10">Name<span class="caret"></span></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="my-journal.html"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-10">My Journal</span></a></li>
+                        <li><a href="d-article-manager.html"><span class="fa fa-support"></span><span class="t-padding-left-10">Article Manager<span></span></a></li>
+                        <li><a href="settings.html"><span class="fa fa-gear"></span><span class="t-padding-left-10">Settings</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="index.html"><span class="fa fa-sign-out"></span><span class="t-padding-left-10">Log out</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Seacrh Bar -->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-search-form-my" style="display: none;">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" id="jq-search-back-btn-my" style="width: 50px;"><span class="fa fa-arrow-left"></span></a>
+            <div class="pull-right my-search-bar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Seacrh Bar End -->
+    <!--Sideabr-->
+    <div class="my-sidebar" id="jq-sidebar-my" style="left: -250px;">
+        <ul class="list-group">
+            <li class="my-sidebar-header t-shadow1">
+                <a class="navbar-brand" id="jq-sidebar-hide-my" role="button"><span class="fa fa-close"></span></a>
+                <a href="index.html"><img src="../images/logo.png" height="20px" style="padding-left: 15px;"></a>
+            </li>
+            <li><a href="index.html" class="list-group-item my-border-radius-0"><span class="fa fa-home"></span><span class="t-padding-left-20">Home</span></a></li>
+            <li><a href="my-journal.html" class="list-group-item my-border-radius-0 active"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-20">My Journal</span></a></li>
+            <li><a href="d-article-manager.html" class="list-group-item my-border-radius-0"><span class="fa fa-tasks"></span> <span class="t-padding-left-20">Article Manager</span></a></li><hr/>
+
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"><strong>Subscription</strong></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 1</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 2</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 3</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 4</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 5</span></a></li>
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"></span><span class="fa fa-chevron-down"></span><span class="t-padding-left-20">View All</span></a></li><hr/>
+
+            <li><a href="settings.html" class="list-group-item my-border-radius-0"><span class="fa fa-gear"></span><span class="t-padding-left-20">Settings</span></a></li>
+        </ul>
+    </div>
+    <div class="my-overlay" id="jq-overlay-my" style="display:none;"></div>
+    <!--Sidebar End-->
+
+    <!-- Body -->
+    <div class="my-body">
+        <div class="my-body-component">
+            <!-- Dashboard Sidebar -->
+            <nav class="navbar navbar-default my-dashboard-sidebar">
+                <div class="navbar-header">
+                    <span class="navbar-brand"><strong>The Dashboard</strong></span>
+                    <a href="#dashboard-sidebar-collapse-my" role="button" class="navbar-toggle" data-toggle="collapse"><span class="caret"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="dashboard-sidebar-collapse-my">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="d-dashboard.html"><span class="fa fa-dashboard"></span> DASHBOARD</a></li>
+                        <li><a href="d-article-manager.html"><span class="fa fa-tasks"></span> ARTICLE MANAGER</a></li>
+                        <li><a href="#dashboard-sidebar-collapse-community-my" data-toggle="collapse"><span class="fa fa-group"></span> COMMUNITY<span class="fa fa-chevron-down pull-right"></span></a>
+                            <ul class="nav collapse" id="dashboard-sidebar-collapse-community-my">
+                                <li><a href="d-comments.html" style="padding-left: 35px;">Comments</a></li>
+                                <li><a href="d-subscribers.html" style="padding-left: 35px;">Subscribers</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#dashboard-sidebar-collapse-anlytics-my" data-toggle="collapse"><span class="fa fa-bar-chart"></span> ANALYTICS<span class="fa fa-chevron-down pull-right"></span></a>
+                            <ul class="nav collapse" id="dashboard-sidebar-collapse-anlytics-my">
+                                <li><a href="d-realtime.html" style="padding-left: 35px;"></span>Realtime</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Dashboard Sidebar End -->
+
+            <!-- Dashboard Content -->
+            <div class="my-dashboard-content pull-right">
+                <div class="container-fluid t-padding-top-bottom-20">
+                    <div class="well col-md-12">
+                        <div class="col-md-6 text-center">
+                            <img src="../images/profilepic.png" class="my-dashboard-header-profile-img">
+                            <span class="t-h3">&nbsp;<b>Journal Name</b></span>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <ul class="list-inline">
+                                <li class="list-inline-item t-margin-right-20">
+                                    <div class="t-h5"><b>5,309,548</b></div>
+                                    <div class="t-h6">Views</div>
+                                </li>
+                                <li class="list-inline-item">
+                                    <div class="t-h5"><b>12,548</b></div>
+                                    <div class="t-h6">Subscribers</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Article Manager Mini section -->
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <strong>Articles <span class="badge">47</span></strong>
+                                    </div>
+                                </div>
+                                <div class="panel-body t-padding-0">
+                                    <div class="col-md-6 col-sm-12 t-padding-5">
+                                        <div class="panel panel-default t-padding-left-right-0">
+                                            <div class="panel-body t-padding-0">
+                                                <div class="my-card">
+                                                    <a href="#">
+                                                        <div class="my-card-thumbnail t-ripple"><img src="../images/img1.png"></div>
+                                                        <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                                                    </a>
+                                                    <div class="t-padding-left-right-10 t-padding-top-bottom-5"><span>Apr 27, 2018 5:44 PM</span></div>
+                                                    <a href="#">
+                                                        <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                                            <span>12,396,868 views</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-footer">  
+                                                <div class="btn-group btn-group-justified">
+                                                    <span class="btn-group" role="group">
+                                                        <a href="#" role="button" class="btn btn-default"><span class="fa fa-thumbs-o-up"> 7386</span></a>
+                                                    </span>
+                                                    <span class="btn-group" role="group">
+                                                        <a href="#" role="button" class="btn btn-default"><span class="fa fa-thumbs-o-down"> 324</span></a>
+                                                    </span>
+                                                    <span class="btn-group" role="group">
+                                                        <a href="d-comments.html" role="button" class="btn btn-default"><span class="fa fa-comment-o"> 456</span></a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 t-padding-5">
+                                        <div class="panel panel-default t-padding-left-right-0">
+                                            <div class="panel-body t-padding-0">
+                                                <div class="my-card">
+                                                    <a href="#">
+                                                        <div class="my-card-thumbnail t-ripple"><img src="../images/img2.jpg"></div>
+                                                        <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                                                    </a>
+                                                    <div class="t-padding-left-right-10 t-padding-top-bottom-5"><span>Apr 27, 2018 5:44 PM</span></div>
+                                                    <a href="#">
+                                                        <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                                            <span>12,396,868 views</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-footer">  
+                                                <div class="btn-group btn-group-justified">
+                                                    <span class="btn-group" role="group">
+                                                        <a href="#" role="button" class="btn btn-default"><span class="fa fa-thumbs-o-up"> 7386</span></a>
+                                                    </span>
+                                                    <span class="btn-group" role="group">
+                                                        <a href="#" role="button" class="btn btn-default"><span class="fa fa-thumbs-o-down"> 324</span></a>
+                                                    </span>
+                                                    <span class="btn-group" role="group">
+                                                        <a href="d-comments.html" role="button" class="btn btn-default"><span class="fa fa-comment-o"> 456</span></a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                  
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="text-center">
+                                        <button class="btn btn-block" onclick="location.href='d-article-manager.html'">View all</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Realtime Minisection -->
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title"><strong>Realtime</strong></div>
+                                </div>
+                                <div class="panel-body t-padding-0">
+                                    <div class="t-padding-5">
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><strong>Last 48 hours</strong></div>
+                                            </div>
+                                            <div class="panel-body t-padding-0">
+                                                <div class="t-padding-10"><span>Estimated views : 73,000</span></div>
+                                                <canvas id="jq-last-48-hours-my"></canvas>
+                                                <div class="t-padding-left-right-0">
+                                                    <span class="pull-left t-padding-left-20"><small>48 hours ago</small></span>
+                                                    <span class="pull-right"><small>Now</small></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><strong>Last 60 minutes</strong></div>
+                                            </div>
+                                            <div class="panel-body t-padding-0">
+                                                <div class="t-padding-10"><span>Estimated views : 2,300</span></div>
+                                                <canvas id="jq-last-60-minutes-my"></canvas>   
+                                                <div class="t-padding-left-right-10">
+                                                    <span class="pull-left t-padding-left-10"><small>60 minutes ago</small></span>
+                                                    <span class="pull-right"><small>Now</small></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comments mini section -->
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title"><strong>Comments</strong></div>
+                                </div>
+                                <div class="panel-body t-padding-0">
+                                    <div class="t-padding-5">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading clearfix">
+                                                <a href="#"><div class="panel-title">
+                                                    <span>Top 10 richest persons in the world</span>
+                                                    <span class="my-comment-thumbnail pull-right"><img src="../images/img1.png"></span></div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-body t-padding-0">
+                                                <div class="t-padding-10">
+                                                    <div class="clearfix">
+                                                        <div class="t-margin-right-10 pull-left">
+                                                            <a href="#"><img src="../images/profilepic.png" class="my-comment-user-img"></a>
+                                                        </div>
+                                                        <div class="pull-left">
+                                                            <div class="t-h5">
+                                                                <a href="#"><strong>User Name</strong></a>
+                                                            </div>
+                                                            <span><small>2 hours ago</small></span>
+                                                        </div> 
+                                                    </div>    
+                                                    <div class="t-padding-5" style="margin-left: 50px;">
+                                                        <p class="t-h6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel-footer clearfix">
+                                                <span class="pull-left">
+                                                    <a href="#" class="t-padding-left-right-10"><span class="fa fa-thumbs-o-up"> 120</span></a>
+                                                    <a href="#" class="t-padding-left-right-10"><span class="fa fa-thumbs-o-down"> 22</span></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="t-padding-5">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading clearfix">
+                                                <a href="#"><div class="panel-title">
+                                                    <span>Top 10 richest persons in the world</span>
+                                                    <span class="my-comment-thumbnail pull-right"><img src="../images/img5.png"></span></div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-body t-padding-0">
+                                                <div class="t-padding-10">
+                                                    <div class="clearfix">
+                                                        <div class="t-margin-right-10 pull-left">
+                                                            <a href="#"><img src="../images/profilepic.png" class="my-comment-user-img"></a>
+                                                        </div>
+                                                        <div class="pull-left">
+                                                            <div class="t-h5">
+                                                                <a href="#"><strong>User Name</strong></a>
+                                                            </div>
+                                                            <span><small>2 hours ago</small></span>
+                                                        </div> 
+                                                    </div>    
+                                                    <div class="t-padding-5" style="margin-left: 50px;">
+                                                        <p class="t-h6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel-footer clearfix">
+                                                <span class="pull-left">
+                                                    <a href="#" class="t-padding-left-right-10"><span class="fa fa-thumbs-o-up"> 120</span></a>
+                                                    <a href="#" class="t-padding-left-right-10"><span class="fa fa-thumbs-o-down"> 22</span></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-block" onclick="location.href='d-comments.html'">View all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Dashboard Content End -->
+        </div>
+    </div>
+    <!-- Body End -->
+</body>
+</html>

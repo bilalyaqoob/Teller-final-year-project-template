@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teller</title>
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/teller.css" type="text/css" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="my-signup-page";>
+        <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-6 my-signup-page-components">
+            <div class="t-padding-20 t-shadow1">
+                <div class="my-login-form">
+                    <form class="form-inline" action="process.html">
+                        <div class="form-group">
+                            <input type="email" class="form-control t-border-radius-30" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control t-border-radius-30" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary t-btn-rounded t-padding-left-right-20" onclick="location.href='index.html'">Login</button>
+                    </form>
+                </div>
+            </div>
+            <div class="container-fluid t-padding-20">
+                <div class="my-create-account-form">
+                    <form class="form-horizontal" action="process.html">
+                        <h3 class="text-center text-primary t-h4"><b class="t-h3">Create Teller Account</b></h3><br>
+                        <div class="form-group">
+                            <input type="text" class="form-control t-border-radius-30" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control t-border-radius-30" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control t-border-radius-30" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control t-border-radius-30" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control t-border-radius-30" placeholder="Re-Enter Password" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-danger t-btn-rounded" onclick="location.href='index.html'">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-pull-6 col-md-6 my-signup-page-components my-login-left-bg">
+            <div class="my-about-div"><!--check css before change it-->
+                <label class="t-margin-bottom-20"><span class="fa fa-check fa-2x t-margin-right-20"></span>Subscribe your interests.</label>
+                <label class="t-margin-bottom-20"><span class="fa fa-book fa-2x t-margin-right-20"></span>Read Articles.</label>
+                <label class="t-margin-bottom-20"><span class="fa fa-edit fa-2x t-margin-right-20"></span>Write your Articles.</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

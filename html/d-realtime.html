@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realtime - Teller</title>
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/teller.css" type="text/css" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/chartjs.min.js"></script>
+    <script src="../js/my-chart.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-header-my">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="jq-sidebar-show-my" role="button"><span class="fa fa-bars"></span></a>
+            <a href="index.html" class="hidden-xs"><img class="navbar-brand" src="../images/logo.png"></a>
+            <a href="index.html" class="visible-xs"><img class="navbar-brand" src="../images/logo.jpg"></a>
+        </div>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="#" id="jq-search-btn-my"><span class="fa fa-search"></span></a></li>
+                <li><a href="editor.html" type="button"><span class="fa fa-edit"></span><span class="hidden-xs">&nbsp;Write Article</span></a></li>
+                <!-- Notifications -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-bell"></span>
+                      <span class="hidden-xs">&nbsp;Notifications</span>
+                      <span class="badge my-header-badge">10</span>
+                    </a>
+                    <ul class="dropdown-menu my-dropdown-scrollable">
+                        <li class="header t-padding-left-10">Notifications</li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li class="text-center"><a href="notifications.html">View all</a></li>
+                    </ul>
+                </li>
+                <!-- User Account -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/profilepic.png" class="my-header-user-img" alt="User Image">
+                        <span class="hidden-xs t-padding-left-10">Name<span class="caret"></span></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="my-journal.html"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-10">My Journal</span></a></li>
+                        <li><a href="d-article-manager.html"><span class="fa fa-support"></span><span class="t-padding-left-10">Article Manager<span></span></a></li>
+                        <li><a href="settings.html"><span class="fa fa-gear"></span><span class="t-padding-left-10">Settings</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="index.html"><span class="fa fa-sign-out"></span><span class="t-padding-left-10">Log out</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Seacrh Bar -->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-search-form-my" style="display: none;">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" id="jq-search-back-btn-my" style="width: 50px;"><span class="fa fa-arrow-left"></span></a>
+            <div class="pull-right my-search-bar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Seacrh Bar End -->
+    <!--Sideabr-->
+    <div class="my-sidebar" id="jq-sidebar-my" style="left: -250px;">
+        <ul class="list-group">
+            <li class="my-sidebar-header t-shadow1">
+                <a class="navbar-brand" id="jq-sidebar-hide-my" role="button"><span class="fa fa-close"></span></a>
+                <a href="index.html"><img src="../images/logo.png" height="20px" style="padding-left: 15px;"></a>
+            </li>
+            <li><a href="index.html" class="list-group-item my-border-radius-0"><span class="fa fa-home"></span><span class="t-padding-left-20">Home</span></a></li>
+            <li><a href="my-journal.html" class="list-group-item my-border-radius-0 active"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-20">My Journal</span></a></li>
+            <li><a href="d-article-manager.html" class="list-group-item my-border-radius-0"><span class="fa fa-tasks"></span> <span class="t-padding-left-20">Article Manager</span></a></li><hr/>
+
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"><strong>Subscription</strong></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 1</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 2</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 3</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 4</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 5</span></a></li>
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"></span><span class="fa fa-chevron-down"></span><span class="t-padding-left-20">View All</span></a></li><hr/>
+
+            <li><a href="settings.html" class="list-group-item my-border-radius-0"><span class="fa fa-gear"></span><span class="t-padding-left-20">Settings</span></a></li>
+        </ul>
+    </div>
+    <div class="my-overlay" id="jq-overlay-my" style="display:none;"></div>
+    <!--Sidebar End-->
+
+    <!-- Body -->
+    <div class="my-body">
+        <div class="my-body-component">
+            <!-- Dashboard Sidebar -->
+            <nav class="navbar navbar-default my-dashboard-sidebar">
+                <div class="navbar-header">
+                    <span class="navbar-brand"><strong>The Dashboard</strong></span>
+                    <a href="#dashboard-sidebar-collapse-my" role="button" class="navbar-toggle" data-toggle="collapse"><span class="caret"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="dashboard-sidebar-collapse-my">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="d-dashboard.html"><span class="fa fa-dashboard"></span> DASHBOARD</a></li>
+                        <li><a href="d-article-manager.html"><span class="fa fa-tasks"></span> ARTICLE MANAGER</a></li>
+                        <li><a href="#dashboard-sidebar-collapse-community-my" data-toggle="collapse"><span class="fa fa-group"></span> COMMUNITY<span class="fa fa-chevron-down pull-right"></span></a>
+                            <ul class="nav collapse" id="dashboard-sidebar-collapse-community-my">
+                                <li><a href="d-comments.html" style="padding-left: 35px;">Comments</a></li>
+                                <li><a href="d-subscribers.html" style="padding-left: 35px;">Subscribers</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#dashboard-sidebar-collapse-anlytics-my" data-toggle="collapse"><span class="fa fa-bar-chart"></span> ANALYTICS<span class="fa fa-chevron-down pull-right"></span></a>
+                            <ul class="nav collapse" id="dashboard-sidebar-collapse-anlytics-my">
+                                <li><a href="d-realtime.html" style="padding-left: 35px;"></span>Realtime</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Dashboard Sidebar End -->
+
+            <!-- Dashboard Content -->
+            <div class="my-dashboard-content pull-right">
+                <div class="container-fluid t-padding-top-bottom-20">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title"><strong>Realtime</strong></div>
+                        </div>
+                        <div class="panel-body t-padding-0">
+                            <div class="t-padding-20">
+                                <div class="clearfix">
+                                    <div class="t-margin-right-20 pull-left">
+                                        <a href="#"><img src="../images/profilepic.png" class="my-realtime-journal-img"></a>
+                                    </div>
+                                    <div class="pull-left">
+                                        <div class="t-h4">
+                                            <a href="#"><strong>My Journal Name</strong></a>
+                                        </div>
+                                        <span><small>223 Articles</small></span>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="t-padding-10">
+                                <span><img src="../images/loader.gif" style="height: 16px; margin-right: 3px;"></span>
+                                <span>Automatically updates every minute</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <div class="panel-title"><strong>Last 48 hours</strong></div>
+                                        </div>
+                                        <div class="panel-body t-padding-0">
+                                            <div class="t-padding-10"><span>Estimated views : 73,000</span></div>
+                                            <canvas id="jq-last-48-hours-my"></canvas>
+                                            <div class="t-padding-left-right-0">
+                                                <span class="pull-left t-padding-left-20"><small>48 hours ago</small></span>
+                                                <span class="pull-right"><small>Now</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <div class="panel-title"><strong>Last 60 minutes</strong></div>
+                                        </div>
+                                        <div class="panel-body t-padding-0">
+                                            <div class="t-padding-10"><span>Estimated views : 2,300</span></div>
+                                            <canvas id="jq-last-60-minutes-my"></canvas>   
+                                            <div class="t-padding-left-right-10">
+                                                <span class="pull-left t-padding-left-10"><small>60 minutes ago</small></span>
+                                                <span class="pull-right"><small>Now</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+
+                            <div class="panel-body t-padding-0" style="overflow-x:auto;">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Articles</th>
+                                            <th><a href="#">Date</a></th>
+                                            <th><a href="#">Estimated views<br/>Last 48 hours</a></th>
+                                            <th><a href="#">Estimated views<br/>Last 60 minutes</a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span><a href="#"><img src="../images/img1.png" class="my-realtime-thumbnail t-ripple"></a></span>
+                                                <span><a href="#">Top 10 richest persons in the world</a></span>
+                                            </td>
+                                            <td style="vertical-align: middle;"><span>January 6, 2017</span></td>
+                                            <td>
+                                                <div class="my-realtime-article-views-48-hours t-ripple"><span>21,000</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="my-realtime-article-views-60-mints t-ripple"><span>670</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span><a href="#"><img src="../images/img2.jpg" class="my-realtime-thumbnail t-ripple"></a></span>
+                                                <span><a href="#">Top 10 richest persons in the world</a></span>
+                                            </td>
+                                            <td style="vertical-align: middle;"><span>January 16, 2017</span></td>
+                                            <td>
+                                                <div class="my-realtime-article-views-48-hours t-ripple"><span>25,000</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="my-realtime-article-views-60-mints t-ripple"><span>1670</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span><a href="#"><img src="../images/img3.jpg" class="my-realtime-thumbnail t-ripple"></a></span>
+                                                <span><a href="#">Top 10 richest persons in the world</a></span>
+                                            </td>
+                                            <td style="vertical-align: middle;"><span>Ferbuary 11, 2017</span></td>
+                                            <td>
+                                                <div class="my-realtime-article-views-48-hours t-ripple"><span>7,000</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="my-realtime-article-views-60-mints t-ripple"><span>230</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span><a href="#"><img src="../images/img4.jpg" class="my-realtime-thumbnail t-ripple"></a></span>
+                                                <span><a href="#">Top 10 richest persons in the world</a></span>
+                                            </td>
+                                            <td style="vertical-align: middle;"><span>March 23, 2017</span></td>
+                                            <td>
+                                                <div class="my-realtime-article-views-48-hours t-ripple"><span>400</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="my-realtime-article-views-60-mints t-ripple"><span>64</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span><a href="#"><img src="../images/img5.png" class="my-realtime-thumbnail t-ripple"></a></span>
+                                                <span><a href="#">Top 10 richest persons in the world</a></span>
+                                            </td>
+                                            <td style="vertical-align: middle;"><span>April 6, 2017</span></td>
+                                            <td>
+                                                <div class="my-realtime-article-views-48-hours t-ripple"><span>203</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="my-realtime-article-views-60-mints t-ripple"><span>13</span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Dashboard Content End -->
+        </div>
+    </div>
+    <!-- Body End -->
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 10 richest persons in the world</title>
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/teller.css" type="text/css" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-header-my">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="jq-sidebar-show-my" role="button"><span class="fa fa-bars"></span></a>
+            <a href="index.html" class="hidden-xs"><img class="navbar-brand" src="../images/logo.png"></a>
+            <a href="index.html" class="visible-xs"><img class="navbar-brand" src="../images/logo.jpg"></a>
+        </div>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="#" id="jq-search-btn-my"><span class="fa fa-search"></span></a></li>
+                <li><a href="editor.html" type="button"><span class="fa fa-edit"></span><span class="hidden-xs">&nbsp;Write Article</span></a></li>
+                <!-- Notifications -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      <span class="fa fa-bell"></span>
+                      <span class="hidden-xs">&nbsp;Notifications</span>
+                      <span class="badge my-header-badge">10</span>
+                    </a>
+                    <ul class="dropdown-menu my-dropdown-scrollable">
+                        <li class="header t-padding-left-10">Notifications</li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li><a href="#"><img src="../images/profilepic.png" class="my-notification-user-img" alt="User Image"><span class="t-padding-left-10">Here is your notification</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li class="text-center"><a href="notifications.html">View all</a></li>
+                    </ul>
+                </li>
+                <!-- User Account -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/profilepic.png" class="my-header-user-img" alt="User Image">
+                        <span class="hidden-xs t-padding-left-10">Name<span class="caret"></span></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="my-journal.html"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-10">My Journal</span></a></li>
+                        <li><a href="d-article-manager.html"><span class="fa fa-support"></span><span class="t-padding-left-10">Article Manager<span></span></a></li>
+                        <li><a href="settings.html"><span class="fa fa-gear"></span><span class="t-padding-left-10">Settings</span></a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a href="index.html"><span class="fa fa-sign-out"></span><span class="t-padding-left-10">Log out</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Seacrh Bar -->
+    <header class="navbar navbar-default navbar-fixed-top t-shadow1" id="jq-search-form-my" style="display: none;">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" id="jq-search-back-btn-my" style="width: 50px;"><span class="fa fa-arrow-left"></span></a>
+            <div class="pull-right my-search-bar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Seacrh Bar End -->
+    <!--Sideabr-->
+    <div class="my-sidebar" id="jq-sidebar-my" style="left: -250px;">
+        <ul class="list-group">
+            <li class="my-sidebar-header t-shadow1">
+                <a class="navbar-brand" id="jq-sidebar-hide-my" role="button"><span class="fa fa-close"></span></a>
+                <a href="index.html"><img src="../images/logo.png" height="20px" style="padding-left: 15px;"></a>
+            </li>
+            <li><a href="index.html" class="list-group-item my-border-radius-0"><span class="fa fa-home"></span><span class="t-padding-left-20">Home</span></a></li>
+            <li><a href="my-journal.html" class="list-group-item my-border-radius-0 active"><span class="fa fa-newspaper-o"></span><span class="t-padding-left-20">My Journal</span></a></li>
+            <li><a href="d-article-manager.html" class="list-group-item my-border-radius-0"><span class="fa fa-tasks"></span> <span class="t-padding-left-20">Article Manager</span></a></li><hr/>
+
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"><strong>Subscription</strong></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 1</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 2</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 3</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 4</span></a></li>
+            <li><a href="#" class="list-group-item my-border-radius-0"><img src="../images/profilepic.png" class="my-header-user-img" alt="User Image"></span><span class="t-padding-left-20">Journal 5</span></a></li>
+            <li><a href="subscription.html" class="list-group-item my-border-radius-0"></span><span class="fa fa-chevron-down"></span><span class="t-padding-left-20">View All</span></a></li><hr/>
+
+            <li><a href="settings.html" class="list-group-item my-border-radius-0"><span class="fa fa-gear"></span><span class="t-padding-left-20">Settings</span></a></li>
+        </ul>
+    </div>
+    <div class="my-overlay" id="jq-overlay-my" style="display:none;"></div>
+    <!--Sidebar End-->
+
+    <!-- Body -->
+    <div class="my-body">
+        <div class="my-body-component">
+            <div class="container t-padding-top-bottom-20">
+                <div class="col-md-9 t-padding-left-right-0">
+                    <!-- Article -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading t-padding-0">
+                            <div class="panel-title">
+                                <div class="my-article-thumbnail t-ripple">
+                                    <img src="../images/article1.jpg" alt="Thumbnail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <h1 class="t-h1"><strong>Top 5 Richest Persons in the world</strong></h1>
+                            <div>
+                                <span class="t-padding-5">
+                                    <a href="my-journal.html">
+                                        <img src="../images/profilepic.png" class="my-notification-user-img">
+                                        <span>&nbsp;Journal Name</span>
+                                    </a>
+                                </span>
+                                <span>&bull;</span>
+                                <span class="t-padding-5">June 19, 2017</span>
+                                <span class="fa fa-eye t-padding-5">&nbsp;1,240&nbsp;<span class="hidden-xs">Views</span></span>
+                                <span class="fa fa-comments-o t-padding-5">&nbsp;23</span><hr/>
+                                <div>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                                    <h2>#1 Jeff Bezos - $112 B</h2>
+                                    <ul>
+                                        <li>Amazon's chief Jeff Bezos is the first person to top $100 billion as number one on the Forbes list of the World's Billionaires. </li>
+                                        <li>He owns 16% of e-commerce colossus Amazon, which he founded in a garage in Seattle in 1994. </li>
+                                        <li>Bezos attended Princeton and worked at a hedge fund before quitting to sell books online. </li>
+                                        <li>Bezos purchased The Washington Post in 2013 for $250 million.</li>
+                                    </ul>
+                                    <h2>#2 Bill Gates - $90 B</h2>
+                                    <ul>
+                                        <li>With his wife Melinda, Bill Gates chairs the Bill and Melinda Gates Foundation, the world's largest private charitable foundation. </li>
+                                        <li>The foundation works to save lives and improve global health, and is working with Rotary International to eliminate polio. </li>
+                                        <li>He remains a board member of Microsoft, the software firm he founded with Paul Allen in 1975. </li>
+                                        <li>In late 2016, Gates announced the launch of a $1 billion Breakthrough Energy investment fund with about 20 other people. </li>
+                                    </ul>
+                                    <h2>#3 Warren Buffett - $84 B</h2>
+                                    <ul>
+                                        <li>Known as the "Oracle of Omaha," Warren Buffett is one of the most successful investors of all time. </li>
+                                        <li>The son of a U.S. congressman, he first bought stock at age 11 and first filed taxes at age 13. </li>
+                                        <li>He has committed to giving more than 99% of his fortune to charity. So far he has given nearly $32 billion. </li>
+                                    </ul>
+                                    <h2>#4 Bernard Arnault - $72 B</h2>
+                                    <ul>
+                                        <li>One of the world's ultimate taste-makers, Bernard Arnault oversees an empire of 70 brands including Louis Vuitton and Sephora. </li>
+                                        <li>Record results at LVMH and a megadeal to buy out nearly all of Christian Dior helped boost Arnault's fortune by $30.5 billion in one year. </li>
+                                        <li>Arts patron is the visionary behind the $135 million Frank Gehry-designed Foundation Louis Vuitton museum in Paris' Bois de Boulogne, opened in 2014. </li>
+                                    </ul>
+                                    <h2>#5 Mark Zuckerberg - $71 B</h2>
+                                    <ul>
+                                        <li>Mark Zuckerberg, Facebook's CEO, has seen his net worth soar as the social network's stock price has skyrocketed. </li>
+                                        <li>Zuckerberg started Facebook at Harvard for students to match names with faces in class. </li>
+                                        <li>He took Facebook public in May 2012 and still owns nearly 17% of the stock.</li>
+                                        <li>Zuckerberg and his wife, Priscilla Chan, have pledged to give away 99% of their Facebook stake over their lifetimes. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            share...
+                        </div>
+                    </div><!-- Article End -->
+                    <!-- comments -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading t-padding-10">
+                            <div class="t-margin-right-10 pull-left">
+                                <a href="#"><img src="../images/profilepic.png" class="my-comment-user-img"></a>
+                            </div>
+                            <div style="margin-left: 55px;">
+                                <input type="text" class="form-control" name="" placeholder="Add a public comment">
+                            </div>   
+                            <div class="clearfix t-padding-top-bottom-5">
+                                <span class="pull-right">
+                                    <button class="btn btn-default">CANCEL</button>
+                                    <button class="btn btn-primary">COMMENT</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="panel-body t-padding-0">
+                            <div class="t-padding-10">
+                                <div class="clearfix">
+                                    <div class="t-margin-right-10 pull-left">
+                                        <a href="#"><img src="../images/profilepic.png" class="my-comment-user-img"></a>
+                                    </div>
+                                    <div class="pull-left">
+                                        <div class="t-h5">
+                                            <a href="#"><strong>User Name</strong></a>
+                                        </div>
+                                        <span><small>2 hours ago</small></span>
+                                    </div> 
+                                </div>    
+                                <div class="t-padding-5" style="margin-left: 50px;">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                </div>
+                            </div>
+                            <div class="t-padding-10">
+                                <div class="clearfix">
+                                    <div class="t-margin-right-10 pull-left">
+                                        <a href="#"><img src="../images/profilepic.png" class="my-comment-user-img"></a>
+                                    </div>
+                                    <div class="pull-left">
+                                        <div class="t-h5">
+                                            <a href="#"><strong>User Name</strong></a>
+                                        </div>
+                                        <span><small>2 hours ago</small></span>
+                                    </div> 
+                                </div>    
+                                <div class="t-padding-5" style="margin-left: 50px;">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- comments End-->
+                </div>
+                <div class="col-md-3">
+                    <div class="my-cards-div"> 
+                        <div class="my-card t-margin-bottom-10">
+                            <a href="#">
+                                <div class="my-card-thumbnail t-ripple"><img src="../images/img1.png"></div>
+                                <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                            </a>
+                            <div class="t-padding-left-right-10 t-padding-top-bottom-5"><a href="#"><span>Journal Name</span></a></div>
+                            <a href="#">
+                                <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                    <span>123k views</span>
+                                    <span class="pull-right">1 Week ago</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="my-card t-margin-bottom-10">
+                            <a href="#">
+                                <div class="my-card-thumbnail t-ripple"><img src="../images/img3.jpg"></div>
+                                <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                            </a>
+                            <div class="t-padding-left-right-10 t-padding-top-bottom-5"><a href="#"><span>Journal Name</span></a></div>
+                            <a href="#">
+                                <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                    <span>123k views</span>
+                                    <span class="pull-right">1 Week ago</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="my-card t-margin-bottom-10">
+                            <a href="#">
+                                <div class="my-card-thumbnail t-ripple"><img src="../images/img5.png"></div>
+                                <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                            </a>
+                            <div class="t-padding-left-right-10 t-padding-top-bottom-5"><a href="#"><span>Journal Name</span></a></div>
+                            <a href="#">
+                                <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                    <span>123k views</span>
+                                    <span class="pull-right">1 Week ago</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="my-card t-margin-bottom-10">
+                            <a href="#">
+                                <div class="my-card-thumbnail t-ripple"><img src="../images/img4.jpg"></div>
+                                <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                            </a>
+                            <div class="t-padding-left-right-10 t-padding-top-bottom-5"><a href="#"><span>Journal Name</span></a></div>
+                            <a href="#">
+                                <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                    <span>123k views</span>
+                                    <span class="pull-right">1 Week ago</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="my-card t-margin-bottom-10">
+                            <a href="#">
+                                <div class="my-card-thumbnail t-ripple"><img src="../images/img.png"></div>
+                                <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                            </a>
+                            <div class="t-padding-left-right-10 t-padding-top-bottom-5"><a href="#"><span>Journal Name</span></a></div>
+                            <a href="#">
+                                <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                    <span>123k views</span>
+                                    <span class="pull-right">1 Week ago</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="my-card t-margin-bottom-10">
+                            <a href="#">
+                                <div class="my-card-thumbnail t-ripple"><img src="../images/img2.jpg"></div>
+                                <h3 class="t-margin-10 t-max-lines">Top 10 richest persons in the world Top 10 richest persons in the world Top 10 richest persons in the world</h3>
+                            </a>
+                            <div class="t-padding-left-right-10 t-padding-top-bottom-5"><a href="#"><span>Journal Name</span></a></div>
+                            <a href="#">
+                                <div class="t-padding-left-right-10 t-padding-top-bottom-5">
+                                    <span>123k views</span>
+                                    <span class="pull-right">1 Week ago</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Body End -->
+</body>
+</html>
